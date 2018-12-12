@@ -1,0 +1,1950 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Laksana_College" Class="Linq_SqlDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAKSANASERVER;Initial Catalog=Laksana_College;User ID=sa;Encrypt=False;TrustServerCertificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="Laksana_CollegeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Col_Academic_Info" Member="Col_Academic_Infos">
+    <Type Name="Col_Academic_Info">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Regulation_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Academic_Year" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Regulation" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Active" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Start_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TO_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Add_Exam" Member="Col_Add_Exams">
+    <Type Name="Col_Add_Exam">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Exam_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Acadamic_Year" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Exam_Type" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Exam_Name" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="From_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TO_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Theory_Of_Subject_Total_Marks" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Theory_Of_Subject_Pass_Marks" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Practical_Subject_Total_Marks" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Practical_Subject_Pass_Marks" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_AECC" Member="Col_AECCs">
+    <Type Name="Col_AECC">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AECC_ID" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Course_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AECC_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AECC_Days" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Attendance_Subjects_Working_days" Member="Col_Attendance_Subjects_Working_days">
+    <Type Name="Col_Attendance_Subjects_Working_day">
+      <Column Name="subject_working_days_id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="subject_working_days_unique_id" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="date_info" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="course_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="section_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="subject_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="academic_year_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="elective_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="is_elective" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="total_working_days" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="From_Month" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="From_Year" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TO_Month" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TO_Year" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Attendance_Working_Days" Member="Col_Attendance_Working_Days">
+    <Type Name="Col_Attendance_Working_Day">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Attend_ID" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Attend_Programme" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Attend_Course" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Attend_Course_Year_Sem" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Attend_Section" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Attend_Subjects" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Attend_Sub_Days" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Attend_Sec_Subjects" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Attend_Sec_Days" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Attend_AECC_Subjects" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Attend_AECC_Days" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Attend_CoCurr_Subjects" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Attend_CoCurr_Days" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Attend_Open_Subjects" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Attend_Open_Days" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Cia_Marks" Member="Col_Cia_Marks">
+    <Type Name="Col_Cia_Mark">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="exam_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ciaMarksId" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="academic_year_id" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="course_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="section_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="student_admission_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="roll_no" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="subject_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="elective_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="marks" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Internal1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Internal2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Internal3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Percentage" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Class_Information" Member="Col_Class_Informations">
+    <Type Name="Col_Class_Information">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Stu_Academic_Yr_Id" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Programme" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Acadamic_Year" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Admission_Id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Co_Curricular_Programme" Member="Col_Co_Curricular_Programmes">
+    <Type Name="Col_Co_Curricular_Programme">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CO_Curriculare_Programme_ID" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Course_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CO_Curriculare_Programme_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CO_Curricular_Days" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Course_Yr_Sem_Info" Member="Col_Course_Yr_Sem_Infos">
+    <Type Name="Col_Course_Yr_Sem_Info">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Cor_Sem_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Cor_Sem_Programme" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Cor_Sem_Course" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Course_Yr_Sem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Sem_Subjects" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Acadamic_Year" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Start_Month" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="End_Month" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Data_Reports" Member="Col_Data_Reports">
+    <Type Name="Col_Data_Report">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Document_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Document_Name" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Document_Type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Path_File" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Document_Details" Member="Col_Document_Details">
+    <Type Name="Col_Document_Detail">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Document_Type" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="Document_Name" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="Document_UploadFile" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Elective_Mass_Update" Member="Col_Elective_Mass_Updates">
+    <Type Name="Col_Elective_Mass_Update">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Roll_Number" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Second_Language" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="AECC" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Open_Elective_SOC" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CO_Curricular_Programme" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Elective_Subjects" Member="Col_Elective_Subjects">
+    <Type Name="Col_Elective_Subject">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Student_Academic_Year_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Elective_Subject_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Elective_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Elective_Subject_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Exam_Types" Member="Col_Exam_Types">
+    <Type Name="Col_Exam_Type">
+      <Column Name="exam_type_id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="exam_type_name" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Internal_Exam_Marks" Member="Col_Internal_Exam_Marks">
+    <Type Name="Col_Internal_Exam_Mark">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="exam_id" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="course_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="section_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="regulation_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="subject_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="elective_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="student_marks" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="last_updated" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Internal_Exams_Info" Member="Col_Internal_Exams_Infos">
+    <Type Name="Col_Internal_Exams_Info">
+      <Column Name="sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="examid" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="nameoftheexamination" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="monthYear" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ExamType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Programme" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CourseYearSem" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Regulation" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Internal_Ordering" Member="Col_Internal_Orderings">
+    <Type Name="Col_Internal_Ordering">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Order_Id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Regulation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Programme" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CourseSemId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Yr_Sem" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Login_Details" Member="Col_Login_Details">
+    <Type Name="Col_Login_Detail">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Login_Id" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="User_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="E_Mail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Admission_Emp_Code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Designation_Role" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Mass_Update_Child_Details" Member="Col_Mass_Update_Child_Details">
+    <Type Name="Col_Mass_Update_Child_Detail">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Programme" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Course_Year_Sem" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Mass_Update_Master" Member="Col_Mass_Update_Masters">
+    <Type Name="Col_Mass_Update_Master">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Programme" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Course_Year_Sem" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Open_Elective_SOC" Member="Col_Open_Elective_SOCs">
+    <Type Name="Col_Open_Elective_SOC">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Open_Elective_SOC_ID" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Course_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Open_Elective_SOC_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Opne_Elective_Days" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Parent_Information" Member="Col_Parent_Informations">
+    <Type Name="Col_Parent_Information">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Parent_ID" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Father_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Father_Occupation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Father_Qualification" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Father_Nature_Of_Work" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Father_UploadFile" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Father_Aadhar_Card_NO" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Father_Economic_Status" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Father_Personal_EMail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Father_Clg_EMail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Father_Phone_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Father_LandLine" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Father_Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Mother_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Mother_Occupation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Mother_Qulification" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Mother_UploadFile" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Mother_Economic_Status" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Mother_Nature_Of_Work" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Mother_Aadhar_Card_NO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Mother_Clg_EMail" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Mother_Personal_EMail" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Mother_Phone_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Mother_LandLine" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Guardian_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Guardian_Occupation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Guardian_Qulification" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Guardian_UploadFile" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Relation" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Guardian_Aadhar_NO" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Personal_Number" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Guardian_LandLine" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Economic_Status" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Pin_Code" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Guardian_Personal_Email" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Guardian_Clg_EMail" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Previous_Education_Details" Member="Col_Previous_Education_Details">
+    <Type Name="Col_Previous_Education_Detail">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Admission_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Last_Studied_Information" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Board_Or_University" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Hall_Ticket_Number" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="TC_Number" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Course_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Year_Of_Passing" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Marks_Secured" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Total_Marks" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Percentage" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="English_Total_Marks" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="English_Marks_" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="English_Marks_Percentage" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Entrance_Test_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Entrance_Test_Year" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Entrance_Test_Rank" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Entrance_Hall_Ticket_NO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Previous_Employee_Details" Member="Col_Previous_Employee_Details">
+    <Type Name="Col_Previous_Employee_Detail">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Employee_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Last_Worked_Place" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Work_Experiance" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Designation" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Aadhar_Card_NO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Residency_Type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Last_Salary" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="From_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="End_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Programme_Categories" Member="Col_Programme_Categories">
+    <Type Name="Col_Programme_Category">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Programme_Cat_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Program_Category_Name" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Programmes" Member="Col_Programmes">
+    <Type Name="Col_Programme">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Programme_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Programme" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Program_Category_Name" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Second_Lang" Member="Col_Second_Langs">
+    <Type Name="Col_Second_Lang">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Second_Lang_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Course_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Second_Lang_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Subject_Code" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Section_Info" Member="Col_Section_Infos">
+    <Type Name="Col_Section_Info">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Sec_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Sec_Programme" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Sec_Course" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Sec_Course_Yr_Sem" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Section_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Student_Courses" Member="Col_Student_Courses">
+    <Type Name="Col_Student_Course">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Yr_Sem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Second_Language" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="AECC" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Co_Curricular" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Open_Elective" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Subject_Category_Name" Member="Col_Subject_Category_Names">
+    <Type Name="Col_Subject_Category_Name">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Sub_Cat_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Subject_Category_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Time_Table" Member="Col_Time_Tables">
+    <Type Name="Col_Time_Table">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Time_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Time_Period_one" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Time_Period_Two" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Duration" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Cls_Start_Time" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Period_Duration" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Break_Time" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Time_Table_In_Rows" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Time_Programme" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Time_Course" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Time_Course_Yr_Sem_Info" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_ID" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Start_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="End_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Monday" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Tuesday" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Wednesday" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Thursday" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Friday" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Saturday" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Create_Notifications" Member="Create_Notifications">
+    <Type Name="Create_Notification">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Create_Notification_Id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Create_Ntifications" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.eis_external_exams_apply" Member="eis_external_exams_applies">
+    <Type Name="eis_external_exams_apply">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="exam_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="course_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="section_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="regulation_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="data" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="subjects_info" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.students_parent_info" Member="students_parent_infos">
+    <Type Name="students_parent_info">
+      <Column Name="student_admission_number" Type="System.String" DbType="VarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="parent_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="remarks" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="relation" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Exam_Sync" Member="Col_Exam_Syncs">
+    <Type Name="Col_Exam_Sync">
+      <Column Name="[S.No]" Member="S_No" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="examSyncID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="examSyncName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="examSyncDescription" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="examSyncCreated" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="examSyncUpdated" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="examSyncStatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="course_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="section_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="exam_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="academic_year_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="programmeName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="examName" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="examMonthYear" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="semisterName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="releaseDate" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ordering_Internal_Child" Member="Ordering_Internal_Childs">
+    <Type Name="Ordering_Internal_Child">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Order_Id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Subject_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Display_Order" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Part" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Print_Exam" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Credit_Points" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Internal_I1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Internal_I2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Internal_I3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CIA_Total_Marks" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CIA_Pass_Marks" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ESE_Total_Marks" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ESE_Pass_Marks" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Total_Marks" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Pass_Marks" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ordering_Internal_Master" Member="Ordering_Internal_Masters">
+    <Type Name="Ordering_Internal_Master">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Order_Id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Regulation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Programme" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Course_Yr_Sem" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.External_Ordering_Child" Member="External_Ordering_Childs">
+    <Type Name="External_Ordering_Child">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Order_Id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Subject_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Display_Order" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Part" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Print_Exam" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Credit_Points" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CIA_Total_Marks" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CIA_Pass_Marks" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ESE_Total_Marks" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ESE_Pass_Marks" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Total_Marks" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Pass_Marks" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Subjects" Member="Col_Subjects">
+    <Type Name="Col_Subject">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Sub_ID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Subject_Code" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Subject_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Subject_Category" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Subject_Type" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Part" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Is_Elective_Subject" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Elective_Subject_Id" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Course_Category_Details" Member="Col_Course_Category_Details">
+    <Type Name="Col_Course_Category_Detail">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Course_Category_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Course_Category_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Programme_Course" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Attendance_Student_Subject_Wise" Member="Col_Attendance_Student_Subject_Wises">
+    <Type Name="Col_Attendance_Student_Subject_Wise">
+      <Column Name="student_subject_working_days_id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="subject_working_days_unique_id" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="course_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="section_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="academic_year_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="is_elective" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="total_working_days" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="From_Month" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TO_Month" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="total_present_days" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="student_admission_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Student_Admission_Number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Subject_Id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Elective_Id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Percentage" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Student_Admission_Form" Member="Col_Student_Admission_Forms">
+    <Type Name="Col_Student_Admission_Form">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Admission_ID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Admission_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Academic_Year" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="First_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Middle_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Date_Of_Birth" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Birth_Place" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Blood_Group" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Identification_Marks" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Resident_Type" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Nationality" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Mother_Tongue" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Religion" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Caste" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Aadhar_Card_NO" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Social_Status" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Student_Land_Line" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Student_Contact" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Clg_Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Personal_Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Student_UploadFile" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Student_Class" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Presant_Address" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Student_Permanent_Address" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_student_separation_audit_log" Member="Col_student_separation_audit_logs">
+    <Type Name="Col_student_separation_audit_log">
+      <Column Name="student_seperation_log_id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Old_Course_Id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Old_Sec_Id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Academic_Yr_Id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Old_AdmissionNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="New_course_Id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="New_Sec_Id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Last_UpdatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Updated_by" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Exam_Sync_Result" Member="Col_Exam_Sync_Results">
+    <Type Name="Col_Exam_Sync_Result">
+      <Column Name="examSyncResultID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="examSyncID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="course_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="section_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="academic_year_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Sub_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CIA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ESE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Moderation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Grace" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Total" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Pass_Result" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Overall_Result" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Grade" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Grade_Point" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Credit_Points" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Credits" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NoOf_Pending" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_External_Marks" Member="Col_External_Marks">
+    <Type Name="Col_External_Mark">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="External_Marks_Id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Exam_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="academic_year_id" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="course_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="section_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="student_admission_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="roll_no" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="subject_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="elective_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="marks" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Moderation" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Grace" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="FinalMarks" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_FormFields" Member="Col_FormFields">
+    <Type Name="Col_FormField">
+      <Column Name="SNo" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Popup_Id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Field_Id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Field_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Employee_Details" Member="Col_Employee_Details">
+    <Type Name="Col_Employee_Detail">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Employee_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Employee_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Date_Of_Appointment" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="WO_SO_DO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="WDS_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Login_Role" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Designation" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Qualification" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Experiance" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Identification_Marks" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Area_Of_Research_Specialization" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Aadhar_Card_NO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Resident_Type" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Emp_Clg_Email" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Emp_Dept_Email" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Emp_Personal_Email" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Emp_Blood_group" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Emp_PAN_Card" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Employee_UploadFile" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Employee_Address" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Employee_City" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Employee_PIN_Code" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Employee_Phone_Number" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Emp_Status" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_External_Exams_Info" Member="Col_External_Exams_Infos">
+    <Type Name="Col_External_Exams_Info">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="exam_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="exam_name" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="month_year" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="Group_Id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="course_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="regulation_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="exam_type_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="exam_timings" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="start_date" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="end_date" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="subjects_info" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_External_Exam_Date_Time" Member="Col_External_Exam_Date_Times">
+    <Type Name="Col_External_Exam_Date_Time">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="exam_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ex_Subjects" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ex_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ex_Time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_Notifications" Member="Col_Notifications">
+    <Type Name="Col_Notification">
+      <Column Name="Notification_ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Notification_Name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Notification_Status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Notification_Type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Path_File" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Col_External_exams_application" Member="Col_External_exams_applications">
+    <Type Name="Col_External_exams_application">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="exam_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="course_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="section_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="regulation_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="data" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="subjects_info" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Programme" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Course_Year_Sem_Info" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Name_Of_Exam" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Month_Year" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Permission" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Photo" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Hall_Ticket_No" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Subjects" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Applicable_Subjects" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Non_App_Subjects" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Student_UploadFile" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Valdity_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.Course_Details_Editing" Method="Course_Details_Editing">
+    <Parameter Name="Sub_Cat_ID" Parameter="sub_Cat_ID" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Creation_Company" Parameter="creation_Company" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="Course_Details_EditingResult">
+      <Column Name="Sub_Cat_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Course_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Get_Exam_Courses" Method="Get_Exam_Courses">
+    <Parameter Name="parameter" Type="System.Int32" DbType="Int" />
+    <Parameter Name="programme" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="course" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="coursesem" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="Get_Exam_CoursesResult">
+      <Column Name="exam_type_name" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Course_Category_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Course_Yr_Sem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="exam_name" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="exam_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="start_date" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="end_date" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="Cor_Course_Yr_Sem1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Acadamic_Year" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Regulation" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Get_Internal_Exam_Courses" Method="Get_Internal_Exam_Courses">
+    <Parameter Name="parameter" Type="System.Int32" DbType="Int" />
+    <Parameter Name="programme" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="course" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="coursesem" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="Get_Internal_Exam_CoursesResult">
+      <Column Name="Programme" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Category_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nameoftheexamination" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="examid" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="Cor_Course_Yr_Sem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Regulation" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetEmployee" Method="GetEmployee">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetEmployeeResult">
+      <Column Name="Name" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Photo" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SaveEmployee" Method="SaveEmployee">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Img" Parameter="img" Type="System.Data.Linq.Binary" DbType="Image" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col__Create_External_Info" Method="Sp_Autoincrement_Col__Create_External_Info">
+    <ElementType Name="Sp_Autoincrement_Col__Create_External_InfoResult">
+      <Column Name="exam_id" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col__StuWise_AttendncId" Method="Sp_Autoincrement_Col__StuWise_AttendncId">
+    <ElementType Name="Sp_Autoincrement_Col__StuWise_AttendncIdResult">
+      <Column Name="working_days_id" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col_Academic_Info" Method="Sp_Autoincrement_Col_Academic_Info">
+    <ElementType Name="Sp_Autoincrement_Col_Academic_InfoResult">
+      <Column Name="Regulation_ID" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col_AdmissionNo" Method="Sp_Autoincrement_Col_AdmissionNo">
+    <ElementType Name="Sp_Autoincrement_Col_AdmissionNoResult">
+      <Column Name="Admission_ID" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col_Attendance_Working_Days" Method="Sp_Autoincrement_Col_Attendance_Working_Days">
+    <ElementType Name="Sp_Autoincrement_Col_Attendance_Working_DaysResult">
+      <Column Name="subject_working_days_id" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col_Cia_Marks" Method="Sp_Autoincrement_Col_Cia_Marks">
+    <ElementType Name="Sp_Autoincrement_Col_Cia_MarksResult">
+      <Column Name="ciaMarksId" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col_Course_Section" Method="Sp_Autoincrement_Col_Course_Section">
+    <ElementType Name="Sp_Autoincrement_Col_Course_SectionResult">
+      <Column Name="Sec_ID" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col_Course_Yr_Sem" Method="Sp_Autoincrement_Col_Course_Yr_Sem">
+    <ElementType Name="Sp_Autoincrement_Col_Course_Yr_SemResult">
+      <Column Name="Cor_Sem_ID" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col_CourseCategory" Method="Sp_Autoincrement_Col_CourseCategory">
+    <ElementType Name="Sp_Autoincrement_Col_CourseCategoryResult">
+      <Column Name="Course_Category_ID" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col_Create_Notifications" Method="Sp_Autoincrement_Col_Create_Notifications">
+    <ElementType Name="Sp_Autoincrement_Col_Create_NotificationsResult">
+      <Column Name="Create_Notification_Id" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col_Data_Report" Method="Sp_Autoincrement_Col_Data_Report">
+    <ElementType Name="Sp_Autoincrement_Col_Data_ReportResult">
+      <Column Name="Document_ID" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col_Elective_Subjects" Method="Sp_Autoincrement_Col_Elective_Subjects">
+    <ElementType Name="Sp_Autoincrement_Col_Elective_SubjectsResult">
+      <Column Name="Elective_Subject_ID" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col_Exam_Applicatin" Method="Sp_Autoincrement_Col_Exam_Applicatin">
+    <ElementType Name="Sp_Autoincrement_Col_Exam_ApplicatinResult">
+      <Column Name="ExamId" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col_ExamSync" Method="Sp_Autoincrement_Col_ExamSync">
+    <ElementType Name="Sp_Autoincrement_Col_ExamSyncResult">
+      <Column Name="Sync_ID" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col_External_Marks" Method="Sp_Autoincrement_Col_External_Marks">
+    <ElementType Name="Sp_Autoincrement_Col_External_MarksResult">
+      <Column Name="ExternalMarksId" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col_Form_Fields" Method="Sp_Autoincrement_Col_Form_Fields">
+    <ElementType Name="Sp_Autoincrement_Col_Form_FieldsResult">
+      <Column Name="Field_Id" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col_Internal_Exam_Info" Method="Sp_Autoincrement_Col_Internal_Exam_Info">
+    <ElementType Name="Sp_Autoincrement_Col_Internal_Exam_InfoResult">
+      <Column Name="examid" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col_ProgrammeCategory" Method="Sp_Autoincrement_Col_ProgrammeCategory">
+    <ElementType Name="Sp_Autoincrement_Col_ProgrammeCategoryResult">
+      <Column Name="Programme_Cat_ID" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col_Programmes" Method="Sp_Autoincrement_Col_Programmes">
+    <ElementType Name="Sp_Autoincrement_Col_ProgrammesResult">
+      <Column Name="Programme_ID" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col_Stu_AcdYr_id" Method="Sp_Autoincrement_Col_Stu_AcdYr_id">
+    <ElementType Name="Sp_Autoincrement_Col_Stu_AcdYr_idResult">
+      <Column Name="Stu_Academic_Yr_Id" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col_SubCategory" Method="Sp_Autoincrement_Col_SubCategory">
+    <ElementType Name="Sp_Autoincrement_Col_SubCategoryResult">
+      <Column Name="Sub_Cat_ID" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col_Subjects" Method="Sp_Autoincrement_Col_Subjects">
+    <ElementType Name="Sp_Autoincrement_Col_SubjectsResult">
+      <Column Name="Sub_ID" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Autoincrement_Col_Time_Table" Method="Sp_Autoincrement_Col_Time_Table">
+    <ElementType Name="Sp_Autoincrement_Col_Time_TableResult">
+      <Column Name="Time_ID" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_AutoIncrement_Examordering" Method="SP_AutoIncrement_Examordering">
+    <ElementType Name="SP_AutoIncrement_ExamorderingResult">
+      <Column Name="OrderId" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_AutoIncrement_Internal_Exam_rdering" Method="SP_AutoIncrement_Internal_Exam_rdering">
+    <ElementType Name="SP_AutoIncrement_Internal_Exam_rderingResult">
+      <Column Name="OrderId" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Col_Get_MonthYear" Method="SP_Col_Get_MonthYear">
+    <Parameter Name="regId" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="SP_Col_Get_MonthYearResult">
+      <Column Name="Date" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Col_GetExamId_by_ExamApplication" Method="Sp_Col_GetExamId_by_ExamApplication">
+    <Parameter Name="Creation_Company" Parameter="creation_Company" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="Sp_Col_GetExamId_by_ExamApplicationResult">
+      <Column Name="exam_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Col_GetExamId_by_ExamTabulation" Method="Sp_Col_GetExamId_by_ExamTabulation">
+    <Parameter Name="Creation_Company" Parameter="creation_Company" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="Sp_Col_GetExamId_by_ExamTabulationResult">
+      <Column Name="exam_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Course_Details_Binding" Method="SP_Course_Details_Binding">
+    <Parameter Name="parameter" Type="System.Int32" DbType="Int" />
+    <Parameter Name="programme" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="course" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="coursesem" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Creation_Company" Parameter="creation_Company" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="SP_Course_Details_BindingResult">
+      <Column Name="Cor_Sem_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Programme" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Category_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Course_Yr_Sem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Sem_Subjects" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="Section_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Course_Sections_Binding" Method="SP_Course_Sections_Binding">
+    <Parameter Name="parameter" Type="System.Int32" DbType="Int" />
+    <Parameter Name="programme" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="course" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="coursesem" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Creation_Company" Parameter="creation_Company" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="SP_Course_Sections_BindingResult">
+      <Column Name="Sec_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Programme" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Category_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Course_Yr_Sem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Section_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Del_Stuclass" Method="Sp_Del_Stuclass">
+    <Parameter Name="Admission_No" Parameter="admission_No" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_Edit_Section" Method="SP_Edit_Section">
+    <Parameter Name="id" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="SP_Edit_SectionResult">
+      <Column Name="Sec_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Programme_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Course_Category_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Cor_Sem_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Section_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_ELective_Subjects_Binding" Method="Sp_ELective_Subjects_Binding">
+    <Parameter Name="Creation_Company" Parameter="creation_Company" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="Sp_ELective_Subjects_BindingResult">
+      <Column Name="Sub_ID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="[Subject Category]" Member="Subject_Category" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Subject_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Subject_Code" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Elective_Subject_Id" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Employees_Binding" Method="Sp_Employees_Binding">
+    <Parameter Name="role" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="searchby" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="txtsearch" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="Sp_Employees_BindingResult">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Employee_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Employee_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Date_Of_Appointment" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="WO_SO_DO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="WDS_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Login_Role" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Designation" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Qualification" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Experiance" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Identification_Marks" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Area_Of_Research_Specialization" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Aadhar_Card_NO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Resident_Type" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Emp_Clg_Email" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Emp_Dept_Email" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Emp_Personal_Email" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Emp_Blood_group" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Emp_PAN_Card" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Employee_UploadFile" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Employee_Address" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Employee_City" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Employee_PIN_Code" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Employee_Phone_Number" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Emp_Status" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_Exam_Halltickets_Report" Method="sp_Exam_Halltickets_Report">
+    <Parameter Name="exam_id" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="sp_Exam_Halltickets_ReportResult">
+      <Column Name="Name_Of_Exam" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Student_UploadFile" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Father_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Month_Year" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Hall_Ticket_No" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Mother_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Photo" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="Programme" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="exam_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Permission" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Course_Year_Sem_Info" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Applicable_Subjects" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="Subject_Code" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Exam_Sync_Data" Method="SP_Exam_Sync_Data">
+    <Parameter Name="examid" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="courseid" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Reg_Id" Parameter="reg_Id" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="SP_Exam_Sync_DataResult">
+      <Column Name="Stu_Academic_Yr_Id" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Sem_Subjects" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="Subjects" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="Subject_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Cia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Final_Marks" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Moderation" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Grace" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Total" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Pass_Marks" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Total_Marks" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Result" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Credit_Points" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Display_Order" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Grade" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="[Grade Point]" Member="Grade_Point" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Credits" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_ExamApplicationReport" Method="sp_ExamApplicationReport">
+    <Parameter Name="exam_id" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="sp_ExamApplicationReportResult">
+      <Column Name="Name_Of_Exam" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Father_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DOB" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="Month_Year" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Hall_Ticket_No" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Mother_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Programme" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="exam_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Permission" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Course_Year_Sem_Info" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Applicable_Subjects" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="Subject_Code" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Generate_Password" Method="Sp_Generate_Password">
+    <Parameter Name="len" Type="System.Int32" DbType="Int" />
+    <Parameter Name="min" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="range" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="exclude" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="output" Type="System.String" DbType="VarChar(50)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Sp_Get_BacklogStudent" Method="Sp_Get_BacklogStudent">
+    <Parameter Name="Coursesem" Parameter="coursesem" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Acdmicyr" Parameter="acdmicyr" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="subname" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="electiveid" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="parameter" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Sp_Get_BacklogStudentResult">
+      <Column Name="Stu_Academic_Yr_Id" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Sub_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Moderation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Pass_Result" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Overall_Result" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Admission_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="academic_year_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="course_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="semisterName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="exam_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_Get_Course_Yr_Sem" Method="sp_Get_Course_Yr_Sem">
+    <Parameter Name="Regulation" Parameter="regulation" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="sp_Get_Course_Yr_SemResult">
+      <Column Name="Course" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Regulation" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Cor_Course_Yr_Sem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Sem_Subjects" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Get_Internal_All_Condition" Method="Sp_Get_Internal_All_Condition">
+    <Parameter Name="parameter" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AcademicYear" Parameter="academicYear" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="CourseYear" Parameter="courseYear" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="Sp_Get_Internal_All_ConditionResult">
+      <Column Name="Stu_Academic_Yr_Id" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Programme" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Course_Yr_Sem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Admission_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Section_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Elective_Subject_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Elective_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Category_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Sem_Subjects" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="Core_Sub_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ciaMarksId" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="exam_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Internal1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Internal2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Internal3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Percentage" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="marks" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Get_Student" Method="Sp_Get_Student">
+    <Parameter Name="Coursesem" Parameter="coursesem" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Acdmicyr" Parameter="acdmicyr" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="subid" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="electiveid" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="parameter" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Sp_Get_StudentResult">
+      <Column Name="Stu_Academic_Yr_Id" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Admission_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Sem_Subjects" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Get_Student_class" Method="Sp_Get_Student_class">
+    <Parameter Name="Admission_No" Parameter="admission_No" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="Sp_Get_Student_classResult">
+      <Column Name="Acadamic_Year" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Stu_Academic_Yr_Id" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Programme" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Sem_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Sec_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Section_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Cor_Sem_Subjects" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Get_Student_Courses_Search" Method="Sp_Get_Student_Courses_Search">
+    <Parameter Name="parameter" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AcademicYear" Parameter="academicYear" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Programme" Parameter="programme" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Course" Parameter="course" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="CourseYear" Parameter="courseYear" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Section" Parameter="section" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Subjects" Parameter="subjects" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Core_Sub" Parameter="core_Sub" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="Sp_Get_Student_Courses_SearchResult">
+      <Column Name="Programme" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Category_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Sem_Subjects" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Stu_Academic_Yr_Id" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Elective_Subject_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Course_Yr_Sem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Regulation" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Section_Name" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Get_Student_Courses_Search_Subject_Details" Method="Sp_Get_Student_Courses_Search_Subject_Details">
+    <Parameter Name="parameter" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AcademicYear" Parameter="academicYear" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Programme" Parameter="programme" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Course" Parameter="course" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="CourseYear" Parameter="courseYear" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Section" Parameter="section" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Subjects" Parameter="subjects" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Core_Sub" Parameter="core_Sub" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="Sp_Get_Student_Courses_Search_Subject_DetailsResult">
+      <Column Name="Stu_Academic_Yr_Id" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Programme" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Course_Yr_Sem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Admission_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Section_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Elective_Subject_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Elective_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Category_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Sem_Subjects" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="Core_Sub_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Get_Student_Subjects" Method="Sp_Get_Student_Subjects">
+    <Parameter Name="Cor_Sem_Course" Parameter="cor_Sem_Course" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Cor_Sem_ID" Parameter="cor_Sem_ID" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="Sp_Get_Student_SubjectsResult">
+      <Column Name="Cor_Sem_Subjects" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Get_Subject_For_Timetable" Method="Sp_Get_Subject_For_Timetable">
+    <Parameter Name="Programme" Parameter="programme" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Course" Parameter="course" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="CourseSem" Parameter="courseSem" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="Sp_Get_Subject_For_TimetableResult">
+      <Column Name="Subject_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Sub_ID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Getting_Course_Details" Method="Sp_Getting_Course_Details">
+    <Parameter Name="programme" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="Sp_Getting_Course_DetailsResult">
+      <Column Name="Course_Category_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Course_Name" Type="System.String" DbType="VarChar(101)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Insert_Select_Update_Col_Internal_Ordering" Method="Sp_Insert_Select_Update_Col_Internal_Ordering" IsComposable="true">
+    <Parameter Name="Order_Id" Parameter="order_Id" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Regulation" Parameter="regulation" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Programme" Parameter="programme" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Course" Parameter="course" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Course_Yr_Sem" Parameter="course_Yr_Sem" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Subject_Name" Parameter="subject_Name" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Display_Order" Parameter="display_Order" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Parts" Parameter="parts" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Credit_Points" Parameter="credit_Points" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="CIA_Total_Marks" Parameter="cIA_Total_Marks" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CIA_Pass_Marks" Parameter="cIA_Pass_Marks" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ESE_Total_Marks" Parameter="eSE_Total_Marks" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ESE_Pass_Marks" Parameter="eSE_Pass_Marks" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Total_Marks" Parameter="total_Marks" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Pass_Marks" Parameter="pass_Marks" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Creation_Company" Parameter="creation_Company" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="Created_Date" Parameter="created_Date" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Modified_Date" Parameter="modified_Date" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Parameter" Parameter="parameter" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.Sp_Insert_Select_Update_Col_Internal_Ordering_Master" Method="Sp_Insert_Select_Update_Col_Internal_Ordering_Master">
+    <Parameter Name="examid" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="nameoftheexamination" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="monthYear" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="StartDate" Parameter="startDate" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="EndDate" Parameter="endDate" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ExamType" Parameter="examType" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Programme" Parameter="programme" Type="System.String" DbType="VarChar(5000)" />
+    <Parameter Name="Course" Parameter="course" Type="System.String" DbType="VarChar(5000)" />
+    <Parameter Name="CourseYearSem" Parameter="courseYearSem" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="Regulation" Parameter="regulation" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="Creation_Company" Parameter="creation_Company" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="Created_Date" Parameter="created_Date" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Modified_Date" Parameter="modified_Date" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Parameter" Parameter="parameter" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Sp_Insert_Select_Update_Col_Internal_Ordering_MasterResult">
+      <Column Name="sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="examid" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="nameoftheexamination" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="monthYear" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ExamType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Programme" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CourseYearSem" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Regulation" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Internal_Wise_Filter" Method="Sp_Internal_Wise_Filter">
+    <Parameter Name="parameter" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Cia" Parameter="cia" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="Sp_Internal_Wise_FilterResult">
+      <Column Name="student_admission_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="exam_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Percentage" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="course_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="subject_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="roll_no" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Internal_One" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Internal_Two" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Internal_Three" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="marks" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Semister_Grade_Card" Method="SP_Semister_Grade_Card" IsComposable="true">
+    <Parameter Name="examid" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="courseid" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Reg_Id" Parameter="reg_Id" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.Sp_Semister_Memo" Method="Sp_Semister_Memo">
+    <Parameter Name="examid" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="Sp_Semister_MemoResult">
+      <Column Name="Display_Order" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Part" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="exam_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MAX" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Min_ESE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Min_Tot" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Father_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Mother_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="programmeName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="examName" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Course_Title" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Code" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Course_credits" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Grade" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Grade_Point" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Credits" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Overall_Result" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TotalCourseCredits" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="Pass_Result" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SGPA" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Part1_SGPA" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Part2_SGPA" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Part3_SGPA" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Subjects_Binding" Method="Sp_Subjects_Binding">
+    <Parameter Name="Creation_Company" Parameter="creation_Company" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="Sp_Subjects_BindingResult">
+      <Column Name="Sub_ID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="[Subject Category]" Member="Subject_Category" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Subject_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Subject_Code" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Tabulation" Method="SP_Tabulation">
+    <Parameter Name="examid" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="courseid" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Reg_Id" Parameter="reg_Id" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="SP_TabulationResult">
+      <Column Name="Stu_Academic_Yr_Id" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Father_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Mother_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="exam_name" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="programmeName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Subjects" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="Subject_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Subject_Code" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Max" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Min_ESE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Min_Tot" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CIA" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ESE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Moderation" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Grace" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MESE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Tabulation_Report" Method="SP_Tabulation_Report" IsComposable="true">
+    <Parameter Name="examid" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="courseid" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Reg_Id" Parameter="reg_Id" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.Sp_Tabulation2" Method="Sp_Tabulation2">
+    <Parameter Name="examid" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="courseid" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Reg_Id" Parameter="reg_Id" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="Sp_Tabulation2Result">
+      <Column Name="Stu_Academic_Yr_Id" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Father_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Mother_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="exam_name" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="programmeName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="part" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Subjects" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="Subject_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Subject_Code" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Max" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Min_ESE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Min_Tot" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CIA" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ESE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Moderation" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Grace" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MESE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Pass_Result" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Grade" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Overall_Result" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Display_Order" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Admission_Number1" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PART1Total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PART2Total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PART3Total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Timetable_Search_Details" Method="Sp_Timetable_Search_Details">
+    <Parameter Name="parameter" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Programme" Parameter="programme" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Course" Parameter="course" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="CourseYear" Parameter="courseYear" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="Sp_Timetable_Search_DetailsResult">
+      <Column Name="Programme_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Programme" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Category_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Category_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Cor_Course_Yr_Sem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Sem_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Section_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Sec_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Time_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Student_Details" Method="Student_Details">
+    <ElementType Name="Student_DetailsResult">
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Clg_Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Parent_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Student_UploadFile" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Section" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Student_Details_Binding" Method="Student_Details_Binding">
+    <Parameter Name="Acdamic_Yr" Parameter="acdamic_Yr" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Admission_No" Parameter="admission_No" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="programe" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Coursesem" Parameter="coursesem" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Course" Parameter="course" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Section" Parameter="section" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Creation_Company" Parameter="creation_Company" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Parameter" Parameter="parameter" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Student_Details_BindingResult">
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Parent_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Academic_Year" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Student_UploadFile" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Clg_Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Section_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Student_Details_Editing" Method="Student_Details_Editing">
+    <Parameter Name="Admission_Number" Parameter="admission_Number" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Creation_Company" Parameter="creation_Company" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="Student_Details_EditingResult">
+      <Column Name="Sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Admission_ID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Admission_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Academic_Year" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="First_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Middle_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Date_Of_Birth" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Birth_Place" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Blood_Group" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Identification_Marks" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Resident_Type" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Nationality" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Mother_Tongue" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Religion" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Caste" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Aadhar_Card_NO" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Social_Status" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Student_Land_Line" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Student_Contact" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Clg_Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Personal_Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Student_UploadFile" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Student_Class" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Presant_Address" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Student_Permanent_Address" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Creation_Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified_By" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Student_Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sub_Details_Editing" Method="Sub_Details_Editing">
+    <Parameter Name="Sub_ID" Parameter="sub_ID" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Creation_Company" Parameter="creation_Company" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="Sub_Details_EditingResult">
+      <Column Name="Sub_ID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="[Subject Category]" Member="Subject_Category" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Subject_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Subject_Code" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Subject_Type" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Part" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Is_Elective_Subject" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Elective_Subject_Id" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Col_Get_Attendance_in_App_Forms" Method="SP_Col_Get_Attendance_in_App_Forms">
+    <Parameter Name="Admission_No" Parameter="admission_No" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Course_Id" Parameter="course_Id" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Academic_Year" Parameter="academic_Year" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="SP_Col_Get_Attendance_in_App_FormsResult">
+      <Column Name="Cor_Sem_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Cor_Sem_Subjects" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="Subject_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Display_Order" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Admission_Number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="course_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="academic_year_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="subject_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="elective_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Second_Lang_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="total_working_days" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="total_present_days" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Start_Month" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="End_Month" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Percentage" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Col_DForm" Method="SP_Col_DForm">
+    <Parameter Name="regulation" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="SP_Col_DFormResult">
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Course_Yr_Sem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Acadamic_Year" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Sem_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Subjects" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="Subject_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Subject_Code" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_col_DForm_Electives" Method="SP_col_DForm_Electives">
+    <Parameter Name="regulation" Type="System.String" DbType="VarChar(10)" />
+    <ElementType Name="SP_col_DForm_ElectivesResult">
+      <Column Name="Acadamic_Year" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Stu_Academic_Yr_Id" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Course_Yr_Sem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Subject_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Subject_Code" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Elective_Subject_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Elective_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Second_Lang_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Exam_BacklogSync_Data" Method="SP_Exam_BacklogSync_Data">
+    <Parameter Name="examid" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="SP_Exam_BacklogSync_DataResult">
+      <Column Name="Stu_Academic_Yr_Id" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Cor_Sem_Subjects" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Sub_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Pass_Result" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Final_Marks" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Moderation" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Grace" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Total" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Pass_Marks" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Total_Marks" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Result" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Credit_Points" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Display_Order" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NoOf_Pending" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Grade" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="[Grade Point]" Member="Grade_Point" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Credits" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Subject_Count_Nominal" Method="Sp_Subject_Count_Nominal">
+    <Parameter Name="subject" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="Sp_Subject_Count_NominalResult">
+      <Column Name="Count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="course_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Get_Internal_Wise_Saving" Method="Sp_Get_Internal_Wise_Saving">
+    <Parameter Name="AcademicYear" Parameter="academicYear" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="CourseYear" Parameter="courseYear" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="Sp_Get_Internal_Wise_SavingResult">
+      <Column Name="Stu_Academic_Yr_Id" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Programme" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Course_Yr_Sem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Admission_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Section_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Category_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Sem_Subjects" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Col_Get_Attendance" Method="SP_Col_Get_Attendance">
+    <Parameter Name="regId" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="CourseSemid" Parameter="courseSemid" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="subjId" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="electiveId" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="FromMonth" Parameter="fromMonth" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ToMonth" Parameter="toMonth" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Percentage" Parameter="percentage" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Parameter" Parameter="parameter" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_Col_Get_AttendanceResult">
+      <Column Name="academic_year_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Admission_Number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="course_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="subject_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="elective_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="is_elective" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Sem_Subjects" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="total_working_days" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Present_Days" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Percentage" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Get_Student_BasedOn_Course" Method="Sp_Get_Student_BasedOn_Course">
+    <Parameter Name="Academic_Yr" Parameter="academic_Yr" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="programme" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Courseid" Parameter="courseid" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Corsemid" Parameter="corsemid" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="section" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="Sp_Get_Student_BasedOn_CourseResult">
+      <Column Name="Acadamic_Year" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Stu_Academic_Yr_Id" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Course_Category_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Course_Category_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Programme" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Programme_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Cor_Sem_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Sec_ID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Section_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Cor_Sem_Subjects" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_ResultConsideration" Method="SP_ResultConsideration">
+    <Parameter Name="Reg" Parameter="reg" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Group" Parameter="group" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="SP_ResultConsiderationResult">
+      <Column Name="Admission_Number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Overall_Result" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[SEM-I_Reg_Pendinig]" Member="SEM_I_Reg_Pendinig" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[SEM-I_Bcklg_Pendinig]" Member="SEM_I_Bcklg_Pendinig" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="exam_type_name" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Course_Category_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cor_Course_Yr_Sem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="exam_name" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="exam_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="academic_year_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sub" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Col_Get_Student_Data" Method="SP_Col_Get_Student_Data">
+    <Parameter Name="regId" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Programme" Parameter="programme" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Course_Category_Name" Parameter="course_Category_Name" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Cor_Course_Yr_Sem" Parameter="cor_Course_Yr_Sem" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Section_Name" Parameter="section_Name" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Creation_Company" Parameter="creation_Company" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="exam_type_name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="paramater" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_Col_Get_Student_DataResult">
+      <Column Name="Regulation" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="H_NO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="StuName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Student_UploadFile" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="[Group]" Member="Group" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SemYear" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Section_Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Cor_Sem_Subjects" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="exam_type_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="exam_type_name" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
